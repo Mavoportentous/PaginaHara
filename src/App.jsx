@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './index.css'
+import logo from './assets/logo.png'
 
 // Mock Data for Menu
 const menuItems = [
@@ -99,7 +100,9 @@ function App() {
       {/* Header */}
       <header>
         <div className="container header-content">
-          <div className="logo">Hara Coffee</div>
+          <div className="logo">
+            <img src={logo} alt="Hara Coffee" style={{ height: '80px' }} />
+          </div>
           <nav>
             <ul className="nav-list">
               <li><a href="#home">Inicio</a></li>
@@ -181,7 +184,9 @@ function App() {
       {/* Footer */}
       <footer>
         <div className="container">
-          <div className="logo" style={{ color: 'var(--color-surface)', marginBottom: '20px' }}>Hara Coffee</div>
+          <div className="logo" style={{ marginBottom: '20px' }}>
+            <img src={logo} alt="Hara Coffee" style={{ height: '60px', filter: 'brightness(0) invert(1)' }} />
+          </div>
           <p>&copy; 2025 Hara Coffee Shop. Todos los derechos reservados.</p>
           <div style={{ marginTop: '20px', display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <a href="#" style={{ color: 'var(--color-surface)' }}>Instagram</a>
