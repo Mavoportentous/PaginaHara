@@ -121,7 +121,7 @@ function App() {
             <p className="hero-subtitle">
               El mejor café, en el ambiente más acogedor. Ven y relájate con nosotros en un espacio diseñado para tus sentidos.
             </p>
-            <button className="btn">Ver Menú</button>
+            <a href="#menu" className="btn">Ver Menú</a>
           </div>
         </div>
       </section>
