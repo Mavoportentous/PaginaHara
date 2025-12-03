@@ -1,0 +1,274 @@
+:root {
+  /* Colors */
+  --color-primary: #A8C686;
+  /* Verde pálido */
+  --color-primary-dark: #8BAE6B;
+  /* Verde más oscuro */
+  --color-background: #F5F1E6;
+  /* Beige */
+  --color-surface: #FFF9F3;
+  /* Crema */
+  --color-text: #5C4033;
+  /* Marrón café */
+  --color-white: #FFFFFF;
+  --color-accent: #D4AF37;
+  /* Dorado suave */
+
+  /* Fonts */
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+em,
+.highlight {
+  font-style: italic;
+}
+
+/* Buttons */
+button,
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Links */
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Grid System for Menu */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* History Section Layout */
+.history-section {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .history-container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .history-image {
+    order: -1;
+    flex: 1;
+  }
+
+  .history-content {
+    flex: 1;
+  }
+}
+
+/* Decorative lines */
+.decorative-line {
+  height: 1px;
+  width: 100px;
+  background-color: var(--color-accent);
+  margin: 20px auto;
+}
+
+/* Header */
+header {
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  background-color: #333;
+  /* Using a placeholder image from Unsplash that matches the description */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2574&auto=format&fit=crop') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content-box {
+  background-color: rgba(255, 249, 243, 0.9);
+  /* Crema semitransparente */
+  padding: 60px 40px;
+  border-radius: 4px;
+  max-width: 700px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+/* Menu Cards */
+.menu-card {
+  background-color: var(--color-white);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+.menu-price {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-text);
+  color: var(--color-surface);
+  padding: 60px 0;
+  text-align: center;
+}
+
+footer p {
+  opacity: 0.8;
+  font-size: 14px;
+}
